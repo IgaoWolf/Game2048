@@ -40,12 +40,12 @@ move_sound = pygame.mixer.Sound("sounds/move_sound.mp3")
 merge_sound = pygame.mixer.Sound("sounds/merge_sound.mp3")
 
 #Aktura do som
-menu_sound.set_volume(1.2)
-game_sound.set_volume(1.05)
-victory_sound.set_volume(1.4)
-lose_sound.set_volume(1.4)
-move_sound.set_volume(1.1)
-merge_sound.set_volume(1.1)
+menu_sound.set_volume(0.2)
+game_sound.set_volume(0.05)
+victory_sound.set_volume(0.4)
+lose_sound.set_volume(0.4)
+move_sound.set_volume(0.1)
+merge_sound.set_volume(0.1)
 
 #Iniciar canais de auido
 move_channel = pygame.mixer.Channel(1)
@@ -208,7 +208,7 @@ def is_game_over(board):
 def has_won(board):
 # def para vitorio quando alcançar o 2048, ajustado para 64 por testes
     for row in board:
-        if 64 in row:
+        if 2048 in row:
             return True
     return False
 
